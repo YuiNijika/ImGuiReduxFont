@@ -1,4 +1,4 @@
-# ImGuiRedux
+# ImGuiReduxFont
 
 为GTA游戏提供完整自定义字体支持的ImGui界面库
 
@@ -24,4 +24,5 @@ ImGui.End();
 ## 下载
 
 [最新版本](https://github.com/user-grinch/ImGuiRedux/releases/latest)
+
 
