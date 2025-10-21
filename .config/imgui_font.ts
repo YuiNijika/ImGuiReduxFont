@@ -6,29 +6,29 @@
  * @link https://github.com/YuiNijika/ImGuiReduxChinese
  */
 
+
 declare global {
-    interface ImGui {
+    namespace ImGui {
         /**
-         * 启用或禁用中文字体支持
-         * @param enabled 是否启用中文字体支持
+         * 启用或禁用自定义字体支持
+         * @param enabled 是否启用自定义字体支持（包括中文、日文、韩文等多语言字符）
          */
-        SetChineseSupportEnabled(enabled: boolean): void;
+        function SetCustomFontEnabled(enabled: boolean): void;
 
         /**
-         * 检查是否启用了中文字体支持
-         * @returns 如果启用了中文字体支持则返回 true
+         * 检查自定义字体支持是否已启用
+         * @returns 如果自定义字体支持已启用则返回 true，否则返回 false
          */
-        IsChineseSupportEnabled(): boolean;
+        function IsCustomFontEnabled(): boolean;
 
         /**
          * 加载自定义字体文件
-         * @param fontPath 字体文件路径
-         * @param fontSize 字体大小
-         * @returns 如果成功加载字体则返回 true
+         * @param fontPath 字体文件的路径（支持 .ttf、.otf 等格式）
+         * @param fontSize 字体大小（像素单位）
+         * @returns 如果字体加载成功则返回 true，否则返回 false
          */
-        LoadCustomFont(fontPath: string, fontSize: float): boolean;
+        function LoadCustomFont(fontPath: string, fontSize: number): boolean;
     }
 }
 
-// 确保这是一个模块
 export {};
