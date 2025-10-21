@@ -17,7 +17,8 @@ if (ImGui.IsCustomFontEnabled()) {
 
 ## 下载
 
-[最新版本](https://github.com/user-grinch/ImGuiRedux/releases/latest)
+[最新版本](https://github.com/YuiNijika/ImGuiReduxFont/releases)
+
 
 
 
