@@ -13,11 +13,11 @@
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
-// Configuration for Chinese font support
-static bool g_EnableChineseSupport = true;
+// Configuration for custom font support
+static bool g_EnableCustomFont = true;
 
 static const ImWchar* GetGlyphRanges() {
-    if (g_EnableChineseSupport) {
+    if (g_EnableCustomFont) {
         static const ImWchar ranges[] = {
             0x0020, 0x00FF, // Basic Latin + Latin Supplement
             0x0980, 0x09FF, // Bengali
@@ -634,15 +634,15 @@ ImGuiKey VirtualKeyToImGuiKey(int vk) {
 }
 
 // Font management functions implementation
-void Hook::SetChineseSupportEnabled(bool enabled) {
-    g_EnableChineseSupport = enabled;
+void Hook::SetCustomFontEnabled(bool enabled) {
+    g_EnableCustomFont = enabled;
     // Force font reload on next frame
     static ImVec2 fScreenSize = ImVec2(-1, -1);
     fScreenSize = ImVec2(-1, -1);
 }
 
-bool Hook::IsChineseSupportEnabled() {
-    return g_EnableChineseSupport;
+bool Hook::IsCustomFontEnabled() {
+    return g_EnableCustomFont;
 }
 
 bool Hook::LoadCustomFont(const char* fontPath, float fontSize) {
