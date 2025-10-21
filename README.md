@@ -5,24 +5,19 @@
 ## 代码示例
 
 ```javascript
-// 启用中文支持
-ImGui.SetChineseSupportEnabled(true);
+// 启用自定义字体支持
+ImGui.SetCustomFontEnabled(true);
 
-// 加载中文字体
-ImGui.LoadCustomFont("CLEO/Fonts/msyh.ttc", 16.0);
-
-// 创建窗口
-if (ImGui.Begin("测试窗口", true)) {
-    ImGui.Text("你好世界！");
-    if (ImGui.Button("点击按钮")) {
-        // 按钮被点击
-    }
+// 检查是否启用了自定义字体支持
+if (ImGui.IsCustomFontEnabled()) {
+    // 加载自定义字体
+    ImGui.LoadCustomFont("assets/AlibabaPuHuiTi-Black.ttf", 16.0);
 }
-ImGui.End();
 ```
 
 ## 下载
 
 [最新版本](https://github.com/user-grinch/ImGuiRedux/releases/latest)
+
 
 
